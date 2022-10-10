@@ -1003,16 +1003,16 @@ void winmain::a_dialog()
 	if (ImGui::BeginPopupModal(pb::get_rc_string(Msg::STRING204), &unused_open, ImGuiWindowFlags_AlwaysAutoResize))
 	{
 		ImGui::TextUnformatted(pb::get_rc_string(Msg::STRING139));
-		ImGui::TextUnformatted("Original game by Cinematronics, Microsoft");
+		ImGui::TextUnformatted("Original game by Cinematronics");
 		ImGui::Separator();
 
 		ImGui::TextUnformatted("Decompiled -> Ported to SDL");
 		ImGui::TextUnformatted("Version 2.0.1");
-		if (ImGui::SmallButton("Project home: https://github.com/k4zmu2a/PinballRemasterX"))
+		if (ImGui::SmallButton("Project home: https://github.com/Xan-Lua/PinballRemasterX"))
 		{
 #if SDL_VERSION_ATLEAST(2, 0, 14)
 			// Relatively new feature, skip with older SDL
-			SDL_OpenURL("https://github.com/k4zmu2a/PinballRemasterX");
+			SDL_OpenURL("https://github.com/Xan-Lua/PinballRemasterX");
 #endif
 		}
 		ImGui::Separator();
