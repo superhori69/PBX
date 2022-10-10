@@ -13,7 +13,7 @@ Supports data files extracted from Full Tilt pinball game.
 
 | Platform           | Source          | URL                                                                                                        |
 | ------------------ | --------------- | ---------------------------------------------------------------------------------------------------------- |
-| Windows            | Xan CDN         | [DownloadHere](https://cdn.xan-core.tk/pbx-requirements/GameData+Libs.7z)                                  |
+| Windows            | Xan CDN         | [Download GameData+Libs from here](https://cdn.xan-core.tk/pbx-requirements/GameData+Libs.7z)              |
 
 Platforms covered by this project: Windows.
 
@@ -35,5 +35,6 @@ Project uses `C++11` and depends on `SDL2` libs.
 
 ### On Windows
 
-Download and unpack GameData+Libs.7z archive into the source folder`.\
-Compile with Visual Studio; tested with 2022.
+Download and unpack GameData+Libs.7z archive into the source folder.\
+The `Lib` does not need to be renamed.\
+Compile with Visual Studio. Tested with Visual Studio 2022.
