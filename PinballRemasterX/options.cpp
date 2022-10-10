@@ -102,7 +102,6 @@ void options::InitPrimary()
 	Options.UncappedUpdatesPerSecond = get_int("Uncapped Updates Per Second", false);
 	Options.SoundChannels = Clamp(get_int("Sound Channels", DefSoundChannels), MinSoundChannels, MaxSoundChannels);
 	Options.HybridSleep = get_int("HybridSleep", false);
-	Options.Prefer3DPBGameData = get_int("Prefer 3DPB Game Data", false);
 	Options.IntegerScaling = get_int("Integer Scaling", false);
 	Options.SoundStereo = get_int("Stereo Sound Effects", false);
 	Options.SoundVolume = Clamp(get_int("Sound Volume", DefVolume), MinVolume, MaxVolume);
@@ -152,7 +151,6 @@ void options::uninit()
 	set_int("Uncapped Updates Per Second", Options.UncappedUpdatesPerSecond);
 	set_int("Sound Channels", Options.SoundChannels);
 	set_int("HybridSleep", Options.HybridSleep);
-	set_int("Prefer 3DPB Game Data", Options.Prefer3DPBGameData);
 	set_int("Integer Scaling", Options.IntegerScaling);
 	set_int("Stereo Sound Effects", Options.SoundStereo);
 	set_int("Sound Volume", Options.SoundVolume);
@@ -288,10 +286,6 @@ void options::toggle(Menu1 uIDCheckItem)
 	case Menu1::WindowLinearFilter:
 		Options.LinearFiltering ^= true;
 		render::recreate_screen_texture();
-		break;
-	case Menu1::Prefer3DPBGameData:
-		Options.Prefer3DPBGameData ^= true;
-		winmain::Restart();
 		break;
 	case Menu1::WindowIntegerScale:
 		Options.IntegerScaling ^= true;

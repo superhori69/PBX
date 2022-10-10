@@ -282,33 +282,6 @@ zmap_header_type* DatFile::GetZMap(int groupIndex)
 
 void DatFile::Finalize()
 {
-	if (!pb::FullTiltMode)
-	{
-		int groupIndex = record_labeled("pbmsg_ft");
-		assertm(groupIndex < 0, "DatFile: pbmsg_ft is already in .dat");
-
-		// Load 3DPB font into dat to simplify pipeline
-		auto rcData = reinterpret_cast<MsgFont*>(ImFontAtlas::DecompressCompressedBase85Data(
-			EmbeddedData::PB_MSGFT_bin_compressed_data_base85));
-		AddMsgFont(rcData, "pbmsg_ft");
-		IM_FREE(rcData);
-
-		// PINBALL2.MID is an alternative font provided in 3DPB data
-		// Scaled down because it is too large for top text box
-		/*auto file = pb::make_path_name("PINBALL2.MID");
-		auto fileHandle = fopenu(file.c_str(), "rb");
-		fseek(fileHandle, 0, SEEK_END);
-		auto fileSize = static_cast<uint32_t>(ftell(fileHandle));
-		auto rcData = reinterpret_cast<MsgFont*>(new uint8_t[fileSize]);
-		fseek(fileHandle, 0, SEEK_SET);
-		fread(rcData, 1, fileSize, fileHandle);
-		fclose(fileHandle);
-		auto groupId = Groups.back()->GroupId + 1u;
-		AddMsgFont(rcData, "pbmsg_ft");
-		delete[] rcData;
-		for (auto i = groupId; i < Groups.size(); i++)
-			Groups[i]->GetBitmap(0)->ScaleIndexed(0.84f, 0.84f);*/
-	}
 
 	for (auto group : Groups)
 	{

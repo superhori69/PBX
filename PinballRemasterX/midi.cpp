@@ -75,13 +75,6 @@ int midi::music_init(int volume)
 		track3 = load_track("TABA3");
 
 		// FT demo .006 has only one music track, but it is nearly 9 min. long
-		if (!track1 && pb::FullTiltDemoMode)
-			track1 = load_track("DEMO");
-	}
-	else
-	{
-		// 3DPB has only one music track. PINBALL2.MID is a bitmap font, in the same format as PB_MSGFT.bin
-		track1 = load_track("PINBALL");
 	}
 
 	return track1 != nullptr;
@@ -116,7 +109,6 @@ Mix_Music* midi::load_track(std::string fileName)
 	}
 
 	// FT has music in two formats, depending on game version: MIDI in 16bit, MIDS in 32bit.
-	// 3DPB music is MIDI only.
 	auto basePath = pb::make_path_name(fileName);
 	for (int i = 0; i <= 1 && !audio; i++)
 	{

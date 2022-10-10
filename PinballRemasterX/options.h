@@ -30,7 +30,6 @@ enum class Menu1:int
 	WindowUniformScale = 600,
 	WindowLinearFilter = 601,
 	WindowIntegerScale = 602,
-	Prefer3DPBGameData = 700,
 };
 
 enum class InputTypes: unsigned
@@ -79,7 +78,6 @@ struct optionsStruct
 	bool UncappedUpdatesPerSecond;
 	int SoundChannels;
 	bool HybridSleep;
-	bool Prefer3DPBGameData;
 	bool IntegerScaling;
 	int SoundVolume;
 	int MusicVolume;

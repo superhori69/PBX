@@ -134,12 +134,7 @@ void pb::SelectDatFile(const std::vector<const char*>& dataSearchPaths)
 	std::string datFileNames[3]
 	{
 		"PINBALLREMASTERX.DAT",
-		"PINBALL.DAT",
 	};
-
-	// Default game data test order: CADET.DAT, PINBALL.DAT, DEMO.DAT
-	if (options::Options.Prefer3DPBGameData)
-		std::swap(datFileNames[0], datFileNames[1]);
 	for (auto path : dataSearchPaths)
 	{
 		if (DatFileName.empty() && path)

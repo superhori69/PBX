@@ -48,8 +48,6 @@ TFlipperEdge::TFlipperEdge(TCollisionComponent* collComp, char* activeFlag, unsi
 	FlipperFlag = MessageCode::TFlipperNull;
 	AngleDst = 0.0;
 
-	// 3DPB and FT have different formats for flipper speed:
-	// 3DPB: Time it takes for flipper to go from source to destination, in sec.
 	// FT: Flipper movement speed, in radians per sec.
 	if (pb::FullTiltMode)
 	{

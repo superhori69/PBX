@@ -106,7 +106,6 @@ DatFile* partman::load_records(LPCSTR lpFileName, bool fullTiltMode)
 				}
 				else
 				{
-					// 3DPB .dat has zeroed zMap headers, in groups 497 and 498, skip them.
 					fseek(fileHandle, static_cast<int>(length), SEEK_CUR);
 					zMap = new zmap_header_type(0, 0, 0);
 				}

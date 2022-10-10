@@ -619,15 +619,6 @@ void winmain::RenderUi()
 				}
 				ImGui::EndMenu();
 			}
-
-			if (ImGui::BeginMenu("Game Data"))
-			{
-				if (ImGui::MenuItem("Prefer 3DPB Data", nullptr, Options.Prefer3DPBGameData))
-				{
-					options::toggle(Menu1::Prefer3DPBGameData);
-				}
-				ImGui::EndMenu();
-			}
 			ImGui::EndMenu();
 		}
 
