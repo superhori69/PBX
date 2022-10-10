@@ -1,4 +1,4 @@
-# PinballRemasterX
+# Pinball Remaster X
 
 ## Summary
 
