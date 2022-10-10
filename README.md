@@ -36,5 +36,5 @@ Project uses `C++11` and depends on `SDL2` libs.
 ### On Windows
 
 Download and unpack GameData+Libs.7z archive into the source folder.\
-The `Lib` does not need to be renamed.\
+The `Lib` folder does not need to be renamed.\
 Compile with Visual Studio. Tested with Visual Studio 2022.
